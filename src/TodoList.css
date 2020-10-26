@@ -1,0 +1,18 @@
+.card__content{
+  display: inline-block;
+  position: relative;
+  top: 30%;
+  margin: 0 20px;
+  width: 90%;
+}
+
+.card__content h1{
+  margin-bottom: 1rem;
+}
+
+.card__content ul{
+  height: 20rem;
+  overflow:hidden; 
+  overflow-y:scroll;
+}
+

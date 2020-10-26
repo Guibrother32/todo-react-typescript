@@ -1,0 +1,17 @@
+.list__item{
+  margin-bottom: .5rem;
+}
+
+.list__item--title{
+  font-size: 1.5em;
+}
+
+.list__item input{
+  margin-right: .5rem;
+  width: 14px;
+  height: 14px;
+}
+
+.complete {
+  text-decoration: line-through;
+}

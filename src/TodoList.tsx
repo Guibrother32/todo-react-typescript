@@ -1,0 +1,29 @@
+import React from 'react'
+import TodoListItem from './TodoListItem';
+import './TodoList.css'
+
+type Todo = {
+  text:string;
+  complete:boolean;
+}
+
+interface TodoListProps{
+  todos:Array<Todo>;
+  toggleTodo:(selectedTodo:Todo)=>void;
+}
+
+const TodoList:React.FC<TodoListProps> = ({todos, toggleTodo}) => {
+  return (
+    <div className="card__content">
+        <h1>Todo</h1>
+        <ul>
+          {todos.map((todo,index) =>{
+            return <TodoListItem todo={todo} toggleTodo={toggleTodo} key={index}/>
+          })}
+        </ul>
+    </div>
+  )
+}
+
+export default TodoList
+

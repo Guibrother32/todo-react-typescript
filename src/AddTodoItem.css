@@ -1,0 +1,27 @@
+.block__form{
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.block__form input{
+  font-size: 1.5em;
+  height: 30px;
+  width: 29rem;
+  border: none;
+  border-radius: 3px;
+  padding-left: 7px;
+}
+
+.block__form button{
+  border: none;
+  background-color: #18A0FB;
+  color: white;
+  height: 30px;
+  width: 50px;
+  border-radius: 3px;
+  margin-left: 1rem;
+  vertical-align: top; 
+}

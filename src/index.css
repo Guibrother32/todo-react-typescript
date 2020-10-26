@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #347AB6 !important;
+  min-height: 100%;
+  margin: 0 !important;
+  padding: 0;
+
+  position: relative;
+}
+
+li{
+  list-style: none;
+}
