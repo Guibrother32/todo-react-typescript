@@ -1,5 +1,6 @@
 .list__item{
   margin-bottom: .5rem;
+  position: relative;
 }
 
 .list__item--title{
@@ -11,6 +12,16 @@
   width: 14px;
   height: 14px;
 }
+.list__item img{
+  display: none;
+  cursor: pointer;
+  position: absolute;
+}
+.list__item:hover img{
+  display: inline-block;
+  right: 5%;
+  bottom: 0;
+} 
 
 .complete {
   text-decoration: line-through;

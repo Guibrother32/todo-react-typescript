@@ -40,12 +40,18 @@ const App:React.FC = () =>{ //React.FunctionComponent
     }
   }
 
+  const removeTodo = (tudoIndex:number)=>{
+    const newTodos = [...todos];
+    newTodos.splice(tudoIndex,1);
+    setTodos(newTodos);
+  }
+
   return (
     <React.Fragment>
       <h1 className="title__welcome">Todo App made for TagoIO</h1>
       <div className="card">
         <img alt="tagoLogo" src={tago} className="logo__tago"/>
-        <TodoList todos={todos} toggleTodo={toggleTodo}/>
+        <TodoList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo}/>
         <AddTodoItem addTodo={addTodo}/>
       </div>
       <h1 className="title__cheering">Thanks for the opportunity</h1>
