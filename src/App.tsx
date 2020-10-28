@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import TodoList from './TodoList';
 import AddTodoItem from './AddTodoItem';
 import './App.css'
@@ -13,11 +13,20 @@ type Todo = {
 const initialTodos:Array<Todo> = [{text:'Make coffee',complete:false},{text:'Do laundry',complete:true}]
 
 
-
-
 const App:React.FC = () =>{ //React.FunctionComponent
 
   const [todos, setTodos] = useState(initialTodos);
+
+  useEffect(()=>{
+    let todoList = localStorage.getItem('todoList');
+    if(todoList){
+      setTodos(JSON.parse(todoList));
+    }
+  },[]);
+  
+  useEffect(()=>{
+    localStorage.setItem('todoList', JSON.stringify(todos));
+  },[todos]);
 
   const toggleTodo = (selectedTodo:Todo) =>{
     const newTodos = todos.map(todo =>{
